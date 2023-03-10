@@ -1,6 +1,6 @@
 clean:
 	cargo clean
-	rm -r ./www/dist
+	rm -rf ./www/dist
 
 pack:
 	wasm-pack build --target web
