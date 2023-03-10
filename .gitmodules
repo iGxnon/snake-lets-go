@@ -1,0 +1,3 @@
+[submodule "www"]
+	path = www
+	url = https://gitea.skygard.cn/iGxnon/snake-lets-go-app.git
