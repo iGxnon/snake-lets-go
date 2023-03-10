@@ -9,11 +9,23 @@ use wasm_bindgen::prelude::*;
 static ALLOC: wee_alloc::WeeAlloc = wee_alloc::WeeAlloc::INIT;
 
 #[wasm_bindgen]
-extern {
+extern "C" {
     fn alert(s: &str);
 }
 
 #[wasm_bindgen]
-pub fn greet() {
-    alert("Hello, snake-lets-go!");
+pub fn hello() {
+    alert("Hello")
+}
+
+/// Represent a cell in snake-lets-go
+/// each cell is represented as a single byte
+#[wasm_bindgen]
+#[repr(u8)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum Cell {
+    Blank = 0, // a blank cell
+    Body = 1,  // a snake body cell
+    Head1 = 2,  // a snake head cell
+    Food1 = 10,
 }
