@@ -13,19 +13,15 @@ extern "C" {
     fn alert(s: &str);
 }
 
-#[wasm_bindgen]
-pub fn hello() {
-    alert("Hello")
-}
-
 /// Represent a cell in snake-lets-go
 /// each cell is represented as a single byte
 #[wasm_bindgen]
 #[repr(u8)]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum Cell {
-    Blank = 0, // a blank cell
-    Body = 1,  // a snake body cell
+    Blank = 0,  // a blank cell
+    Body = 1,   // a snake body cell
     Head1 = 2,  // a snake head cell
-    Food1 = 10,
+    Head2 = 3,  //
+    Food1 = 10, //
 }
