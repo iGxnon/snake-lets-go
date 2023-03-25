@@ -9,5 +9,8 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" name="aplayer" level="application" />
+    <orderEntry type="library" name="meting" level="application" />
+    <orderEntry type="library" name="@xizeyoupan/meting" level="application" />
   </component>
 </module>
